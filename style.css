@@ -1,0 +1,729 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: black;
+    padding: 10px 20px;
+  
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li img {
+    height: 80px;
+    width: 100px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+} 
+
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Dark Theme Colors */
+  :root {
+    --dark-bg: #121212;
+    --primary-color: #ffffff;
+    --secondary-color: #1e90ff; /* A calming blue shade */
+    --accent-color: #f39c12; /* A vibrant orange shade */
+  }
+  
+  
+  
+  /* Hero Section Styles */
+  .hero {
+    background-image: url('http://www.speakingtree.in//files/blogfiles/images/920010/murda_7.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+    position: relative;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--secondary-color);
+    color: var(--dark-bg);
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+  
+  /* About Section Styles */
+.about {
+  background-color: var(--dark-bg);
+  color: var(--primary-color);
+  padding: 80px 20px;
+}
+
+.about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-content blockquote {
+  font-style: italic;
+  color: var(--secondary-color);
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+.about-images {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.about-images img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+}
+
+
+
+.timeline-section {
+  background-color: var(--dark-bg);
+  color: var(--primary-color);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* margin-top: 15px; */
+}
+
+h2 {
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+}
+
+.timeline {
+  padding: 20px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  width: 100%;
+  
+}
+
+.timeline-content {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+h3 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Optional Timeline Circle */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -10px; /* Modify position here for circles at the left side */
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+
+
+/* Vision and Contributions Section Styles */
+.vision-contributions {
+  background-color: var(--dark-bg);
+  color: var(--primary-color);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.vision-contributions .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision-contributions h2 {
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.vision-contributions p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.vision-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.vision-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.vision-card h3 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.vision-card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.vision-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Books and Writing Section Styles */
+.books-section {
+  background-color: var(--dark-bg);
+  color: var(--primary-color);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.books-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.books-section h2 {
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+}
+
+.books-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.book-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 250px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-color);
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+/* Get Involved Section Styles */
+.get-involved-section {
+  background-color: var(--dark-bg);
+  color: var(--primary-color);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.get-involved-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.get-involved-section h2 {
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.get-involved-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.involvement-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.involve-card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.involve-card h3 {
+  font-size: 22px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.involve-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.involve-btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.involve-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.involve-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+/* Footer Section Styles */
+.footer-section {
+  background-color: #111;
+  color: var(--primary-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-logo h3 {
+  font-size: 24px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--primary-color);
+}
+
+.footer-links h4, .footer-contact h4 {
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: var(--accent-color);
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-color);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+/* Sign In Section Styles */
+.sign-in-section {
+  background-color: var(--dark-bg); /* Consistent background color */
+  color: var(--primary-color); /* Text color */
+  padding: 80px 20px; /* Padding around the section */
+  text-align: center; /* Center-align text */
+}
+
+.sign-in-section .container {
+  max-width: 1000px;  /* Width limit for the form */
+  margin: 0 auto; /* Center the form container */
+  background-color: #1a1a1a; /* Dark background for form container */
+  padding: 40px; /* Padding inside the form container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.sign-in-section h2 {
+  font-size: 28px; /* Heading size */
+  margin-bottom: 20px; /* Space below heading */
+  color: var(--accent-color); /* Accent color for heading */
+}
+
+.sign-in-section p {
+  font-size: 16px; /* Text size */
+  margin-bottom: 20px; /* Space below paragraph */
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  gap: 15px; /* Space between form elements */
+}
+
+.sign-in-form .form-group {
+  text-align: left; /* Align form labels to the left */
+}
+
+.sign-in-form label {
+  display: block; /* Ensure labels are on their own line */
+  margin-bottom: 5px; /* Space below labels */
+  font-weight: bold; /* Bold labels */
+  color: var(--primary-color); /* Consistent text color */
+}
+
+.sign-in-form input[type="email"],
+.sign-in-form input[type="password"] {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Input text size */
+  background-color: #2a2a2a; /* Darker background for inputs */
+  color: var(--primary-color); /* Text color for inputs */
+}
+
+.sign-in-form input[type="checkbox"] {
+  margin-right: 10px; /* Space between checkbox and label */
+}
+
+.sign-in-form .cta-button {
+  background-color: var(--secondary-color); /* Button background color */
+  color: var(--dark-bg); /* Button text color */
+  border: none; /* No border for button */
+  padding: 12px; /* Padding for button */
+  font-size: 16px; /* Button text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners for button */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.sign-in-form .cta-button:hover {
+  background-color: var(--accent-color); /* Hover state color */
+}
+
+.forgot-password {
+  margin-top: 10px; /* Space above forgot password link */
+}
+
+.forgot-password a {
+  color: var(--secondary-color); /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.forgot-password a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+/* Life and Achievements Section Styles */
+.life-achievements {
+  background-color: var(--dark-bg); /* Matching the existing dark background */
+  color: var(--primary-color); /* Text color */
+  padding: 80px 20px; /* Padding around the section */
+}
+
+.life-achievements .container {
+  max-width: 1200px; /* Maximum width for the section */
+  margin: 0 auto; /* Centering the container */
+  display: flex; /* Flexbox for side-by-side layout */
+  align-items: center; /* Aligning items vertically */
+  gap: 40px; /* Space between image and content */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.life-images {
+  flex: 1; /* Flex property to adjust image size */
+  min-width: 300px; /* Minimum width for the image container */
+}
+
+.life-images img {
+  max-width: 100%; /* Ensure image scales down within its container */
+  border-radius: 10px; /* Rounded corners for image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.life-images img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.life-content {
+  flex: 2; /* Flex property to adjust content size */
+  min-width: 300px; /* Minimum width for the content container */
+}
+
+.life-content h2 {
+  font-size: 36px; /* Font size for heading */
+  margin-bottom: 20px; /* Space below heading */
+  color: var(--accent-color); /* Accent color for heading */
+}
+
+.life-content p {
+  font-size: 18px; /* Font size for paragraphs */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 20px; /* Space below paragraphs */
+}
+
+.life-content blockquote {
+  font-style: italic; /* Italic text for quotes */
+  color: var(--secondary-color); /* Secondary color for quotes */
+  border-left: 4px solid var(--secondary-color); /* Border for quote */
+  padding-left: 20px; /* Padding inside the blockquote */
+  margin: 20px 0; /* Margin around the blockquote */
+}
+.parallax {
+
+  min-height: 500px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat:repeat;
+  background-size: cover;
+}
+
+
+
+.main-maps{
+    height: 300px;
+    width: 50px;
+    /* align-items: center; */
+}
+.internal{
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  height: 300px;
+  width: 1380px;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 50%; */
+}
+.second{
+  /* margin-left: 50%; */
+  /* margin-bottom: 50px; */
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
